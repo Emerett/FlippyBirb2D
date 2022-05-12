@@ -20,10 +20,19 @@ public class PoweupMovement : MonoBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(-30, player.transform.position.y, transform.position.z), speed);
             }
+            else
+            {
+                ForwardMovement();
+            }
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(-30, transform.position.y, transform.position.z), speed);
+            ForwardMovement();
         }
+    }
+
+    void ForwardMovement() //ABSTRACTION
+    {
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(-30, transform.position.y, transform.position.z), speed);
     }
 }
