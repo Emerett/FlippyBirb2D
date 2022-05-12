@@ -1,9 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using TMPro;
-using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
@@ -17,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public GameObject shield;
     public InputAction flipInput;
 
+    public EventChannelObject gameOverEvent;
     private SpriteRenderer birb;
     private Rigidbody2D rb;
     private AudioSource noise;
@@ -46,6 +44,7 @@ public class PlayerController : MonoBehaviour
         //If the player moves too far out of bounds, disable them. Otherwise, move the player back to the ideal position if they get dislodged by obstacles
         if (transform.position.x < leftBound)
         {
+            gameOverEvent.RaiseEvent();
             gameObject.SetActive(false);
         }
 
@@ -70,4 +69,6 @@ public class PlayerController : MonoBehaviour
         isShielded = false;
         shield.SetActive(false);
     }
+
+
 }

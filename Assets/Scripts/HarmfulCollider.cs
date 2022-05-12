@@ -2,22 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HarmfulCollider : MonoBehaviour
+public class HarmfulCollider : BaseCollider
 {
     private GameManager manager;
-    private AudioSource noise;
 
     // Start is called before the first frame update
     void Start()
     {
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         noise = GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -29,7 +22,7 @@ public class HarmfulCollider : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public override void OnTriggerEnter2D(Collider2D collision)
     {
         //If this object collides with a shield, destroy this object
         if (collision.gameObject.CompareTag("Shield"))

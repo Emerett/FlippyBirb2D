@@ -632,7 +632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &427310652
 RectTransform:
   m_ObjectHideFlags: 0
@@ -948,6 +948,7 @@ GameObject:
   - component: {fileID: 585912252}
   - component: {fileID: 585912251}
   - component: {fileID: 585912250}
+  - component: {fileID: 585912253}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -1020,8 +1021,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1781928831}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 585912253}
+        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -1070,6 +1071,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 585912248}
   m_CullTransparentMesh: 1
+--- !u!114 &585912253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585912248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9744c45fddbc06248a04715b8f993d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1133476055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1265,7 @@ MonoBehaviour:
   powerups:
   - {fileID: 8360830485573417189, guid: 315fedf3d0fa59a4caad5f5108a199ec, type: 3}
   - {fileID: 6818337832868608872, guid: 2750e223592fca243beb95101ef624d9, type: 3}
+  gameOverEvent: {fileID: 11400000, guid: 9ecf87cdb556d24479c49e3ea5d33e47, type: 2}
 --- !u!4 &1781928832
 Transform:
   m_ObjectHideFlags: 0
@@ -1868,6 +1882,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4619702335876088724, guid: b5f4424fbf0197c4bb3a868dcfbfa77a, type: 3}
+      propertyPath: gameOverEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ecf87cdb556d24479c49e3ea5d33e47, type: 2}
     - target: {fileID: 4619702335876088724, guid: b5f4424fbf0197c4bb3a868dcfbfa77a, type: 3}
       propertyPath: flipInput.m_Id
       value: b5a8b5e8-a712-41e9-b6cf-08b36f9eb5ee

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> obstacles;
     public List<GameObject> powerups;
 
+    public EventChannelObject gameOverEvent;
     private AudioSource noise;
 
     private float spawnInterval = 2;
@@ -27,11 +29,22 @@ public class GameManager : MonoBehaviour
     {
         noise = GetComponent<AudioSource>();
     }
-    // Starts the game
-    public void StartGame()
+
+    private void OnEnable()
     {
-        gameOverText.gameObject.SetActive(false);
-        titleText.gameObject.SetActive(false);
+        SceneManager.sceneLoaded += StartGame;
+        gameOverEvent.onEventRaised += GameOver;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= StartGame;
+        gameOverEvent.onEventRaised -= GameOver;
+    }
+
+    // Starts the game
+    public void StartGame(Scene scene, LoadSceneMode mode)
+    {
         scoreText.gameObject.SetActive(true);
         player.SetActive(true);
         isGameActive = true;
@@ -48,13 +61,6 @@ public class GameManager : MonoBehaviour
         isGameActive = false;
         Physics2D.gravity = new Vector2(0, 0);
         gameOverText.gameObject.SetActive(true);
-    }
-
-    //Restarts the scene when the button is pressed
-    public void RestartGame()
-    {
-        Physics2D.gravity = new Vector2(0, 3);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     //Obtain a random obstacle assigned to the array and spawn it in the world
