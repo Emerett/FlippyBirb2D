@@ -1266,6 +1266,7 @@ MonoBehaviour:
   - {fileID: 8360830485573417189, guid: 315fedf3d0fa59a4caad5f5108a199ec, type: 3}
   - {fileID: 6818337832868608872, guid: 2750e223592fca243beb95101ef624d9, type: 3}
   gameOverEvent: {fileID: 11400000, guid: 9ecf87cdb556d24479c49e3ea5d33e47, type: 2}
+  scoreEvent: {fileID: 11400000, guid: eab6805faaa209247a88aedb3012cb58, type: 2}
 --- !u!4 &1781928832
 Transform:
   m_ObjectHideFlags: 0

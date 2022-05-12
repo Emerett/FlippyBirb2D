@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PoweupMovement : MonoBehaviour
@@ -16,9 +14,12 @@ public class PoweupMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (transform.position.x > player.transform.position.x)
+        if (player != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(-30, player.transform.position.y, transform.position.z), speed);
+            if (transform.position.x > player.transform.position.x)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, new Vector3(-30, player.transform.position.y, transform.position.z), speed);
+            }
         }
         else
         {

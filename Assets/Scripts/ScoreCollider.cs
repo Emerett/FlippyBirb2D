@@ -1,27 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class ScoreCollider : BaseCollider
+public class ScoreCollider : BaseCollider //INHERITANCE
 {
-    private GameManager manager;
+    public EventChannelObject scoreEvent;
 
     // Start is called before the first frame update
     void Start()
     {
-        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         noise = GetComponent<AudioSource>();
     }
 
-    public override void OnTriggerEnter2D(Collider2D collision)
+    public override void OnTriggerEnter2D(Collider2D collision) //POLYMORPHISM
     {
         if (collision.gameObject.tag == "Player")
         {
-            //Get the player's score, increment it, then announce it
+            //Call the Score Event and play noise
+            scoreEvent.RaiseEvent();
             noise.Play();
-            manager.score++;
-            manager.scoreText.text = "Score: " + manager.score;
+            Debug.Log("Score Collider Activated");
         }
     }
 }

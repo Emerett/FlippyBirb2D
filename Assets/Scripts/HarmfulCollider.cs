@@ -1,33 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class HarmfulCollider : BaseCollider
+public class HarmfulCollider : BaseCollider //INHERITANCE
 {
-    private GameManager manager;
+    public EventChannelObject gameOverEvent;
 
     // Start is called before the first frame update
     void Start()
     {
-        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         noise = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //If this object collides with the player, destroy the player
+        //If this object collides with the player, raise the Game Over event
         if (collision.gameObject.CompareTag("Player"))
         {
-            manager.GameOver();
+            gameOverEvent.RaiseEvent();
         }
     }
 
-    public override void OnTriggerEnter2D(Collider2D collision)
+    public override void OnTriggerEnter2D(Collider2D collision) //POLYMORPHISM
     {
         //If this object collides with a shield, destroy this object
         if (collision.gameObject.CompareTag("Shield"))
         {
             noise.Play();
+            Debug.Log("Box Destroyed");
             Destroy(gameObject);
         }
     }

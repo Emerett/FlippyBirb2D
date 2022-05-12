@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -20,6 +18,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> powerups;
 
     public EventChannelObject gameOverEvent;
+    public EventChannelObject scoreEvent;
     private AudioSource noise;
 
     private float spawnInterval = 2;
@@ -34,12 +33,14 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.sceneLoaded += StartGame;
         gameOverEvent.onEventRaised += GameOver;
+        scoreEvent.onEventRaised += UpdateScore;
     }
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= StartGame;
         gameOverEvent.onEventRaised -= GameOver;
+        scoreEvent.onEventRaised -= UpdateScore;
     }
 
     // Starts the game
@@ -53,9 +54,17 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SpawnRandomPowerups());
     }
 
+    //Updates the score
+    public void UpdateScore()
+    {
+        score++;
+        scoreText.text = "Score: " + score;
+    }
+
     //Triggers the Game Over state
     public void GameOver()
     {
+        Debug.Log("Game Over");
         noise.Play();
         player.SetActive(false);
         isGameActive = false;

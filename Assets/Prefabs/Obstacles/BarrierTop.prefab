@@ -265,6 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37fd2b0f9522b03419b10d25a2c17d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noise: {fileID: 0}
+  scoreEvent: {fileID: 11400000, guid: eab6805faaa209247a88aedb3012cb58, type: 2}
 --- !u!82 &6952422977409215131
 AudioSource:
   m_ObjectHideFlags: 0

@@ -176,6 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2272311d57fcc949afa15232a1669d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noise: {fileID: 0}
+  gameOverEvent: {fileID: 11400000, guid: 9ecf87cdb556d24479c49e3ea5d33e47, type: 2}
 --- !u!82 &8124659649858933884
 AudioSource:
   m_ObjectHideFlags: 0
@@ -398,6 +400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37fd2b0f9522b03419b10d25a2c17d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noise: {fileID: 0}
+  scoreEvent: {fileID: 11400000, guid: eab6805faaa209247a88aedb3012cb58, type: 2}
 --- !u!50 &8601500990111122946
 Rigidbody2D:
   serializedVersion: 4

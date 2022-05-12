@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,6 +6,7 @@ public class EventChannelObject : ScriptableObject
 {
     public UnityAction onEventRaised;
 
+    //Invoke events linked to this channel
     public void RaiseEvent()
     {
         onEventRaised.Invoke();

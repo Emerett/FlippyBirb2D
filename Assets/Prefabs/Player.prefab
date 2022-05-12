@@ -241,6 +241,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isShielded: 0
   shield: {fileID: 4619702334956992739}
+  flipInput:
+    m_Name: Flip Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: bc6f9099-8c2c-46d5-9bec-8f47b2337d64
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  gameOverEvent: {fileID: 0}
 --- !u!95 &4619702335876088722
 Animator:
   serializedVersion: 4
