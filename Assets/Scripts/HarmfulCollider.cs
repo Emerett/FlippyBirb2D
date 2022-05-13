@@ -25,7 +25,7 @@ public class HarmfulCollider : BaseCollider //INHERITANCE
         if (collision.gameObject.CompareTag("Shield"))
         {
             noise.Play();
-            Debug.Log("Box Destroyed");
+            Debug.Log("Obstacle Destroyed");
             Destroy(gameObject);
         }
     }

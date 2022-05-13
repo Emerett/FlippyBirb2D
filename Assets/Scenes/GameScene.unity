@@ -1259,9 +1259,11 @@ MonoBehaviour:
   - {fileID: 2257029232681530457, guid: 2519e403bccc528479535eee6bb4c0de, type: 3}
   - {fileID: 3477280100198807482, guid: 05b9e6a9c63158a45b1ac6d1361e844b, type: 3}
   - {fileID: 3477280100198807482, guid: 00b05409733163747b1abec0d2fc6892, type: 3}
-  - {fileID: 386221070104652761, guid: 1f0247633ba97444bbd8189fa0fc820a, type: 3}
+  - {fileID: 3115115877550398645, guid: bb3b207a601a44749be5cff93d69801d, type: 3}
   - {fileID: 7157405785899406779, guid: e3a826e0798d3ca43b312bebe6c5943a, type: 3}
   - {fileID: 4858338243374801812, guid: 7c891b2940aba2e41b486120a30d6955, type: 3}
+  - {fileID: 2436774074140249119, guid: c5a04d817d1651d46a92ed7fe08d0090, type: 3}
+  - {fileID: 3976488470645193766, guid: b5f7af4c90143bf4bb8083f7f482c7b6, type: 3}
   powerups:
   - {fileID: 8360830485573417189, guid: 315fedf3d0fa59a4caad5f5108a199ec, type: 3}
   - {fileID: 6818337832868608872, guid: 2750e223592fca243beb95101ef624d9, type: 3}
@@ -1411,10 +1413,10 @@ RectTransform:
   m_Father: {fileID: 1994763490}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 144.93048, y: -60.037872}
-  m_SizeDelta: {x: 228.861, y: 53.0757}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -143, y: -87}
+  m_SizeDelta: {x: 197.0484, y: 75.1344}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1828464579
 MonoBehaviour:
@@ -1436,17 +1438,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score: 0'
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281606177
+  m_fontColor: {r: 0.12941177, g: 0.1254902, b: 0.20392159, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1463,14 +1465,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1773,12 +1775,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 960, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1835,6 +1837,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4619702334956992749, guid: b5f4424fbf0197c4bb3a868dcfbfa77a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4619702335876088720, guid: b5f4424fbf0197c4bb3a868dcfbfa77a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1905,7 +1911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4619702335876088724, guid: b5f4424fbf0197c4bb3a868dcfbfa77a, type: 3}
       propertyPath: flipInput.m_SingletonActionBindings.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4619702335876088724, guid: b5f4424fbf0197c4bb3a868dcfbfa77a, type: 3}
       propertyPath: flipInput.m_SingletonActionBindings.Array.data[0].m_Id
@@ -1920,6 +1926,10 @@ PrefabInstance:
       value: 540da842-c037-4abf-8d34-4d7772bfafd8
       objectReference: {fileID: 0}
     - target: {fileID: 4619702335876088724, guid: b5f4424fbf0197c4bb3a868dcfbfa77a, type: 3}
+      propertyPath: flipInput.m_SingletonActionBindings.Array.data[3].m_Id
+      value: 37c3dcbe-be45-4edc-83c1-ba01c54d6bc4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619702335876088724, guid: b5f4424fbf0197c4bb3a868dcfbfa77a, type: 3}
       propertyPath: flipInput.m_SingletonActionBindings.Array.data[0].m_Path
       value: <Keyboard>/space
       objectReference: {fileID: 0}
@@ -1932,6 +1942,10 @@ PrefabInstance:
       value: <Gamepad>/buttonSouth
       objectReference: {fileID: 0}
     - target: {fileID: 4619702335876088724, guid: b5f4424fbf0197c4bb3a868dcfbfa77a, type: 3}
+      propertyPath: flipInput.m_SingletonActionBindings.Array.data[3].m_Path
+      value: <Touchscreen>/Press
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619702335876088724, guid: b5f4424fbf0197c4bb3a868dcfbfa77a, type: 3}
       propertyPath: flipInput.m_SingletonActionBindings.Array.data[0].m_Action
       value: Flip Input
       objectReference: {fileID: 0}
@@ -1941,6 +1955,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4619702335876088724, guid: b5f4424fbf0197c4bb3a868dcfbfa77a, type: 3}
       propertyPath: flipInput.m_SingletonActionBindings.Array.data[2].m_Action
+      value: Flip Input
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619702335876088724, guid: b5f4424fbf0197c4bb3a868dcfbfa77a, type: 3}
+      propertyPath: flipInput.m_SingletonActionBindings.Array.data[3].m_Action
       value: Flip Input
       objectReference: {fileID: 0}
     - target: {fileID: 4619702335876088725, guid: b5f4424fbf0197c4bb3a868dcfbfa77a, type: 3}

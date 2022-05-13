@@ -13,7 +13,7 @@ public class JumpCollider : BaseCollider //INHERITANCE
         //If this collided with the player, set the player's isShielded bool to true and destroy this object
         if (collision.gameObject.CompareTag("Player"))
         {
-            Vector3 jumpLandingPoint = new Vector3(collision.transform.position.x + 20, collision.transform.position.y, collision.transform.position.z);
+            Vector3 jumpLandingPoint = new Vector3(collision.transform.position.x + 15, collision.transform.position.y, collision.transform.position.z);
             collision.transform.position = jumpLandingPoint;
             noise.Play();
             Debug.Log("Jump Powerup Activated");
